@@ -1,4 +1,4 @@
-complete <- function(directory,id=322){
+complete <- function(directory,id=1:332){
   path <- paste0(getwd(),"/",directory)
   data <- data.frame()
   for(i in id){
@@ -13,7 +13,7 @@ complete <- function(directory,id=322){
                       header=T)
     }
     else{
-      dat <- read.csv(paste(path,"/0",as.character(i),".csv",sep=""),
+      dat <- read.csv(paste(path,"/",as.character(i),".csv",sep=""),
                       as.is=T,
                       header=T)
     }

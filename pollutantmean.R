@@ -15,7 +15,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
       data <- rbind(data,dat)
     }
     else{
-      dat <- read.csv(paste(path,"/0",as.character(i),".csv",sep=""),
+      dat <- read.csv(paste(path,"/",as.character(i),".csv",sep=""),
                       as.is=T,
                       header=T)
       data <- rbind(data,dat)
